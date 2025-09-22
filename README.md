@@ -1,4 +1,4 @@
-**_<h1 align="center">:vulcan_salute: Proyecto Realizado con Andoid Studio - Hola Mundo:computer:</h1>_**
+**_<h1 align="center">:vulcan_salute: Proyecto Semáforo Calculadora de Propinas:computer:</h1>_**
 
 **<h3>:blue_book: Contexto del Proyecto:</h3>**
 
@@ -12,18 +12,14 @@
 <p>El proyecto fue realizado con Android Studio, utilizando Java y Kotlin.</p>
 <p>Para poder probar con diferentes valores, se habilito en el botón de calcular la opción de limpiar los campos para poder ingresar nuevos valores.</p>
 
-<img src="./img/wireframes/wireframe_calculadora_propinas.png" alt="Wireframe Aplicacion" style="width: 80%;">
+<img src="./app/src/main/res/drawable/wireframe_calculadora_propinas.png" alt="Wireframe Aplicacion" style="width: 80%;">
 
 **<h3>:book: Link a video en Youtube que muestra proyecto ejecutado:</h3>**
 
 <p align="center">
-  <a href="https://www.youtube.com/watch?v=6VQe9vkByBM" target="_blank">
-    <img src="https://img.youtube.com/vi/6VQe9vkByBM/hqdefault.jpg" alt="Míralo en YouTube"/>
+  <a href="https://www.youtube.com/watch?v=6VQe9vkByBM" target="_blank" style="display:inline-block; padding:10px 20px; background:#ff0000; color:white; border-radius:8px; text-decoration:none; font-weight:bold;">
+    ▶️ Ver en YouTube
   </a>
-</p>
-
-<p align="center">
-  ▶️ <a href="https://www.youtube.com/watch?v=6VQe9vkByBM" target="_blank"><b>Ver en YouTube</b></a>
 </p>
 
 **<h3>📁 Estructura del Proyecto Android:</h3>**
