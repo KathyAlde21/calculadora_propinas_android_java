@@ -12,15 +12,11 @@
 <p>El proyecto fue realizado con Android Studio, utilizando Java y Kotlin.</p>
 <p>Para poder probar con diferentes valores, se habilito en el botón de calcular la opción de limpiar los campos para poder ingresar nuevos valores.</p>
 
-<img src="./app/src/main/res/drawable/wireframe_calculadora_propinas.png" alt="Wireframe Aplicacion" style="width: 80%;">
+<img src="./app/src/main/res/drawable/wireframe_calculadora_propinas.png" alt="Wireframe Aplicacion" style="width: 30%;">
 
 **<h3>:book: Link a video en Youtube que muestra proyecto ejecutado:</h3>**
 
-<p align="center">
-  <a href="https://www.youtube.com/watch?v=6VQe9vkByBM" target="_blank" style="display:inline-block; padding:10px 20px; background:#ff0000; color:white; border-radius:8px; text-decoration:none; font-weight:bold;">
-    ▶️ Ver en YouTube
-  </a>
-</p>
+[▶️ Ver en YouTube](https://www.youtube.com/watch?v=6VQe9vkByBM)
 
 **<h3>📁 Estructura del Proyecto Android:</h3>**
 
@@ -72,8 +68,8 @@
 
 **<h3>:book: Imagen general del proyecto:</h3>**
 
-<img src="./app/src/main/res/drawable/semaforo_propinas_codigo.jpg" alt="Proyecto Vista General" style="width: 80%;">
+<img src="./app/src/main/res/drawable/semaforo_propinas_codigo.jpg" alt="Proyecto Vista General" style="width: 100%;">
 
 **<h3>:book: Imagen emulador celular:</h3>**
 
-<img src="./app/src/main/res/drawable/semaforo_propinas_ejecutado.jpg" alt="Vista Celular" style="width: 40%;">
+<img src="./app/src/main/res/drawable/semaforo_propinas_ejecutado.jpg" alt="Vista Celular" style="width: 80%;">
