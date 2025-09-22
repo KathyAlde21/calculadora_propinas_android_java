@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calculadora Propinas</string>
+    <string name="tv_titulo">SEMÁFORO DE PROPINAS</string>
+    <string name="et_monto">Monto</string>
+    <string name="et_porcentaje">Propina ( % )</string>
+    <string name="btn_calcular_propina">CALCULAR PROPINAS</string>
+
+</resources>
