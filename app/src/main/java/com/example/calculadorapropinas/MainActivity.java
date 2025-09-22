@@ -1,6 +1,8 @@
 package com.example.calculadorapropinas;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView tvResultado;
     private ImageView ivEstado;
 
+    private Handler handler = new Handler(Looper.getMainLooper());
+    private Runnable runnableLimpiarCampos;
+    private boolean calculoRealizado = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +42,25 @@ public class MainActivity extends AppCompatActivity {
         ivEstado = findViewById(R.id.iv_estado);
 
         // Configuración del botón para calcular la propina al hacer clic
-        btnCalcularPropina.setOnClickListener(v -> calcularPropina()); //función para manejar el clic
+        btnCalcularPropina.setOnClickListener(v -> {
+            if (calculoRealizado) {
+            // Si ya se hizo un cálculo, limpiar campos
+            limpiarCampos();
+            calculoRealizado = false;
+            btnCalcularPropina.setText("Calcular Propina"); // Opcional: Cambiar texto del botón
+        } else {
+            // Si es el primer clic, calcular propina
+            calcularPropina();
+        }
+    });
+        // Inicializar el Runnable para limpiar campos
+        runnableLimpiarCampos = () -> {
+            limpiarCampos();
+            calculoRealizado = false; // Restablecer para el próximo cálculo
+            btnCalcularPropina.setText("Calcular Propina"); // Opcional: Cambiar texto del botón
+        };
     }
+
 
     /* ---------- Metodo para calcular la propina ------------------------------- */
     private void calcularPropina() {
@@ -56,18 +78,34 @@ public class MainActivity extends AppCompatActivity {
         // Convertir a numeros enteros
         int monto = Integer.parseInt(montoTexto);
         int porcentaje = Integer.parseInt(porcentajeTexto);
+        Toast.makeText(this, "Monto: " + monto + ", Porcentaje: " + porcentaje + " %", Toast.LENGTH_LONG).show();
 
+        // Ocultar la imagen de estado
+        //ivEstado.setVisibility(View.INVISIBLE);
 
         // Calcular la propina y total
-        int propina = monto * (porcentaje / 100);
+        int propina = monto * porcentaje / 100;
         int total = monto + propina;
 
         // Mostrar el resultado en el TextView
-        String resultado = "Propina: $" + propina + "\nTotal: $" + total;
+        String resultado = "Propina: $" + propina + "\nTotal a pagar: $" + total;
         tvResultado.setText(resultado);
 
         // Cambiar imagen segun porcentaje ingresado propina
         cambiarImagen(porcentaje);
+
+        // Marcar que se ha realizado un cálculo
+        calculoRealizado = true;
+        btnCalcularPropina.setText("Limpiar"); // Opcional: Cambiar texto del botón
+    }
+
+    /* ---------- Metodo para limpiar los campos -------------------------------- */
+    private void limpiarCampos() {
+        etMonto.setText("");
+        etPorcentaje.setText("");
+        tvResultado.setText("");
+        ivEstado.setVisibility(View.GONE); // Ocultar la imagen al limpiar
+        Toast.makeText(this, "Campos limpiados", Toast.LENGTH_SHORT).show();
     }
 
     /* ---------- Cambiar imagen segun propina ------------------------------- */
